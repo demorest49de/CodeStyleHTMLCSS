@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="index.css">
+		<script defer src="js/script.js"></script>
+		<title>Code Style HTML & CSS</title>
+</head>
+<body>
+		<article class="article_container">
+				<h1 class="title">Code Style HTML & CSS</h1>
+
+				<nav class="article_navigation">
+						<ul class="article_list">
+								<li class="article_item">
+										<button type="button" id="articleCss" class="switch_article"> Code Style CSS</button>
+								</li>
+								<li class="article_item">
+										<button type="button" id="articleHtml" class="switch_article"> Code Style HTML</button>
+								</li>
+						</ul>
+				</nav>
+
+				<article class="article article_css">
+						<h2 class="subtitle">Code Style CSS</h2>
+						<p class="text">Хороший код — это код который удобно читать и поддерживать.</p>
+						<p class="text">Хороший код должен быть простым:</p>
+
+						<ul class="list">
+								<li class="item">используйте легко читаемые селекторы и говорящие классы. По ним сразу можно понять к
+										чему
+										применяются стили.
+								</li>
+								<li class="item">классы пишите в нижнем регистре (строчными буквами).</li>
+								<li class="item">вместо пробела в классах используйте знак «дефис». Старайтесь не использовать нижнее
+										подчеркивание и camelCase.
+								</li>
+								<li class="item">код должен быть в одном стиле: везде используется один порядок свойств, одинаковые
+										отступы и
+										пробелы, один стиль записи цветов и псевдоэлементов.
+								</li>
+						</ul>
+
+						<div class="block_image">
+								<figure>
+										<figcaption>плохо</figcaption>
+										<img class="image" src="img/css/bad.png" alt="Пример плохого кода" height="200">
+								</figure>
+
+								<figure>
+										<figcaption>хорошо</figcaption>
+										<img class="image" src="img/css/good.png" alt="Пример хорошего кода" height="200">
+								</figure>
+						</div>
+
+						<p class="text">Оформляем блок со свойствами:</p>
+
+						<ul class="list">
+								<li class="item">после селектора, перед открывающей блок «фигурной скобкой» ставьте «пробел».</li>
+								<li class="item">в начале строки перед свойствами ставится «два пробела». Это самый популярный
+										вариант.
+								</li>
+								<li class="item">после двоеточия ставьте «пробел».</li>
+								<li class="item">обязательно ставить «точку с запятой» в конце свойства.</li>
+								<li class="item">ставьте закрывающую «фигурную скобку» на новой строке.</li>
+						</ul>
+
+						<figure>
+								<figcaption>Между набором правил оставляйте одну пустую строку:</figcaption>
+								<img class="image" src="img/css/empty.png" alt="Пример кода" height="399">
+						</figure>
+
+						<p class="text">Все стили пишем через селектор класса. Теги используем только для глобальных стилей, <span
+										class="bold">id</span>
+								в стилях не используем.</p>
+
+						<p class="text">Избегайте использование <span class="bold">!important</span>.</p>
+
+						<p class="text">Псевдокласс <span class="bold">nth-child</span> используем только со значениями <span
+										class="bold">even</span> и
+								<span class="bold">odd</span>. В остальных случая используем дополнительный класс.</p>
+
+						<p class="interval-text">Сохраняйте уровень вложенности не более двух элементов, если не используем БЭМ.</p>
+						<p class="interval-text">Плохо: <span class="bold">.block .faq .title</span></p>
+						<p class="interval-text">Хорошо: <span class="bold">.faq .title</span></p>
+
+						<p class="text">При использовании БЭМ вложенность не используется.</p>
+
+						<p class="text">Обязательно указывайте альтернативный вид и тип семейства шрифтов.</p>
+
+						<p class="text">Проверяйте вёрстку на переполнение.</p>
+
+						<p class="text">У интерактивных элементов обязательны стили состояний: <span class="bold">hover</span>,
+								<span
+												class="bold">focus</span>,
+								<span class="bold">active</span>, <span class="bold">disabled</span>.</p>
+
+						<p class="text">Если используете свойство <span class="bold">display: inline-block</span>, обязательно
+								добавляйте свойство
+								<span class="bold">vertical-align</span>.</p>
+
+						<p class="text">Свойство <span class="bold">position</span> используем в крайнем случае. Исключение: если
+								иначе сделать
+								невозможно или сложно.</p>
+
+						<p class="text">У нулевых значений не нужно писать единицы измерения. Когда значение <span
+										class="bold">0</span>, то не важно это
+								px, % или попугайчики.</p>
+
+						<p class="text">Значения цвета <span class="bold">hex</span> пишем в нижнем регистре.</p>
+
+						<p class="text">Проверяйте css в <a href="https://jigsaw.w3.org/css-validator/">валидаторе</a>.</p>
+
+						<section>
+								<h3 class="subsubtitle">Дополнительно</h3>
+
+								<p class="text">В названиях файлов и папок используйте только латиницу и буквы в нижнем регистре, без
+										пробелов. Для разделения
+										слов используйте «дефис» или нижние подчёркивание.</p>
+						</section>
+				</article>
+
+				<article class="article article_html hide">
+						<h2 class="subtitle">Code Style HTML</h2>
+
+
+						<section>
+								<h3 class="subsubtitle">!DOCTYPE</h3>
+
+								<p class="text">В начале страницы обязательно должен быть указан актуальный &lt;!DOCTYPE html&gt;, чтобы работать в режиме
+										стандартов и последовательного рендеринга элементов в каждом доступном браузере.</p>
+						</section>
+
+						<section>
+								<h3 class="subsubtitle">Атрибут локализации</h3>
+
+								<p class="text">Для элемента &lt;html&gt; в атрибуте lang должен указываться соответствующий язык документа.</p>
+
+								<p class="text">Это нужно для правильной работы синтеза речи, для переводчиков и поисковиков.</p>
+
+								<h4 class="clipping">Вырезка из спецификации HTML5</h4>
+
+								<blockquote class="line-left">
+										<p>Разработчикам рекомендуется указывать атрибут языка в начале html файла, тем самым указывая на принадлежность
+												языка документа. Это способствует инструментам генерации голоса определить то, какое произношение использовать, а
+												инструментам перевода определить каким правилам придерживаться и так далее.</p>
+								</blockquote>
+						</section>
+
+						<section>
+								<h3 class="subsubtitle">Кодировка символов документа</h3>
+
+								<p class="text">Кодировка символов на странице всегда должна быть явно указана, чтобы обеспечить корректное отображение
+										текста.</p>
+
+								<p class="text">Для Кириллицы нужно использовать UTF-8 кодировку, убедитесь что ваш документ так же имеет кодировку UTF-8.</p>
+
+								<figure>
+										<img class="image" src="img/html/utf8.png" alt="Пример кода" height="300">
+								</figure>
+						</section>
+
+						<section>
+								<h3 class="subsubtitle">Базовый синтаксис</h3>
+
+								<p class="text">Теги и их атрибуты пишутся строчными буквами.</p>
+
+								<p class="text">Для значений атрибутов всегда используются двойные кавычки.</p>
+
+								<p class="text">Для отступов у вложенных элементов используется отступ в 2 пробела (или табуляция размером 2 пробела).</p>
+
+								<figure>
+										<img class="image" src="img/html/code.png" alt="Пример кода" height="400">
+								</figure>
+						</section>
+
+						<section>
+								<h3 class="subsubtitle">Закрывающие теги</h3>
+
+								<p class="text">Закрывающий слеш у одиночных тегов (&lt;img&gt;,&lt;br&gt; и другие) не ставится.</p>
+
+								<p class="text">В остальных случаях , как <span class="bold"> &lt;body&gt;&lt;/body&gt;, &lt;p>&lt;/p&gt; или &lt;li&gt;&lt;/li&gt;</span>,
+										обязателен закрывающий тег.</p>
+						</section>
+
+						<section>
+								<h3 class="subsubtitle">Подключение стилей</h3>
+
+								<p class="text">Файл стилей подключается с помощью тега &lt;link&gt; внутри тега &lt;head&gt;.</p>
+
+								<p class="text">Обязательный атрибут rel - со значением stylesheet, иначе браузер не поймет что вы подключили.</p>
+
+								<figure>
+										<img class="image" src="img/html/style.png" alt="Пример кода" height="200">
+								</figure>
+						</section>
+
+						<section>
+								<h3 class="subsubtitle">Атрибуты</h3>
+
+								<p class="text">Атрибут класса у HTML-элементов пишется первым.</p>
+
+								<p class="text">Так проще распознать его, остальные атрибуты можно указывать в любом порядке, но желательно чтобы их порядок от
+										элемента к элементу сохранялся.</p>
+
+								<p class="text">Для логических атрибутов, таких как checked, disabled, required и тд, значение не указывается.</p>
+
+								<h3 class="subsubtitle">ALT - атрибут</h3>
+
+								<p class="text">Обязательно нужно указывать атрибут alt у тега img, чтобы было чем его "заменить" если вдруг изображение не
+										загрузилось</p>
+
+								<p class="text">Так же значение alt атрибута очень важно, для людей использующих вспомогательные технологии, например экранные
+										читалки, они не видят интерфейс, а "читают" сайты с помощью экранного диктора. Программа зачитывает для них alt
+										атрибут чтобы было понятно что на изображении.</p>
+						</section>
+
+						<section>
+								<h3 class="subsubtitle">Валидность HTML</h3>
+
+								<p class="text">Документ должен проходить проверку на валидность HTML.</p>
+
+								<p class="text">Для проверки используется <a href="https://validator.w3.org/#validate_by_input/">валидатор</a> w3c.</p>
+						</section>
+				</article>
+		</article>
+</body>
+</html>
