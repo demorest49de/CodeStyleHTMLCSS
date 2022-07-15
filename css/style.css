@@ -101,3 +101,27 @@ ul {
     display: flex;
     flex-wrap: wrap;
 }
+
+.bold {
+    font-weight: 700;
+}
+
+.image {
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.interval-text {
+    margin: 0;
+}
+
+.subsubtitle {
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+.line-left {
+    margin-left: 20px;
+    padding-left: 10px;
+    border-left: 2px solid #6d6b6b;
+}
