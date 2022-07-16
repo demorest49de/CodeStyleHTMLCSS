@@ -135,15 +135,12 @@ ul {
     filter: grayscale(100%);
 }
 
-.font_colored_gray {
-    color: lightgray;
-}
-
 .switch_article {
     min-width: 200px;
     height: 50px;
     border-radius: 8px;
     border: 2px solid transparent;
+    background-color: #fff;
     outline: none;
     font-size: 18px;
     font-weight: 700;
@@ -156,10 +153,6 @@ ul {
     color: white;
 }
 
-.switch_article_img:hover{
-    filter: grayscale(0%);
-}
-
 .switch_article:focus {
     background-color: #721988;
     border-color: #B8FF20;
@@ -168,4 +161,11 @@ ul {
 
 .switch_article:active {
     background-color: #da44ff;
+}
+
+.switch_article:disabled {
+    background-color: #fff;
+    outline: none;
+    border-color: white;
+    color: dimgrey;
 }
